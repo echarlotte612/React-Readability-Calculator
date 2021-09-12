@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap');
+/* Variables */
+:root {
+  --title-text: #222222;
+  --primary-text: #ff4605;
+  --text: #7A7A7A;
+  --button-primary: #505BE0;
+  --button-secondary: #61CE70;
+  --white: #fff;
+  --off-white: rgb(250, 249, 246);
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--off-white);
+  background: linear-gradient(to right, #61CE70, #505BE0);
+}
+
+.app {
+  width: 70vw;
+  font-family: Mulish, monospace;
+  background: var(--white);
+  color: var(-text);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--text) 0px 3px 8px;
+}
+/* TITLE */
+.secondary {
+  color: var(--primary-text);
+}
+
+/* GENERATOR */
+textarea {
+  width: 90%;
+  height: 250px;
+  padding: 10px;
+  border: 1px solid var(--text);
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  border-radius: 6px;
+  font-family: Mulish, monospace;
+}
+
+button {
+  background-color: var(--button-primary);
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 700;
+  border-radius: 6px;
+  margin: 10px 0 10px 0;
+  padding: 18px 33px;
+  border: none;
+}
