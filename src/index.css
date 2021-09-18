@@ -2,7 +2,7 @@
 /* Variables */
 :root {
   --title-text: #222222;
-  --primary-text: #ff4605;
+  --primary-text: #414bb6;
   --text: #7A7A7A;
   --button-primary: #505BE0;
   --button-secondary: #61CE70;
@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--off-white);
-  background: linear-gradient(to right, #61CE70, #505BE0);
+  background: linear-gradient(to right, #414bb6, #505BE0);
 }
 
 .app {
@@ -28,7 +28,11 @@ body {
   color: var(-text);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: var(--text) 0px 3px 8px;
+  filter: 
+    drop-shadow(hsl(235, 50%, 40%) 3px 3px 6px)
+    drop-shadow(hsl(235, 50%, 40%) 5px 5px 10px)
+    drop-shadow(hsl(235, 50%, 40%) 8px 8px 16px)
+  ;
 }
 /* TITLE */
 .secondary {
