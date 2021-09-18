@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 /* Variables */
 :root {
   --title-text: #222222;
-  --primary-text: #ff4605;
+  --primary-text: #414bb6;
   --text: #7A7A7A;
   --button-primary: #505BE0;
   --button-secondary: #61CE70;
@@ -12,23 +13,27 @@
 
 body {
   margin: 0 auto;
+  font-family: Mulish, monospace;
   box-sizing: border-box;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--off-white);
-  background: linear-gradient(to right, #61CE70, #505BE0);
+  background: linear-gradient(to right, #414bb6, #505BE0);
 }
 
 .app {
   width: 70vw;
-  font-family: Mulish, monospace;
   background: var(--white);
   color: var(-text);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: var(--text) 0px 3px 8px;
+  filter: 
+    drop-shadow(hsl(235, 50%, 40%) 3px 3px 6px)
+    drop-shadow(hsl(235, 50%, 40%) 5px 5px 10px)
+    drop-shadow(hsl(235, 50%, 40%) 8px 8px 16px)
+  ;
 }
 /* TITLE */
 .secondary {
@@ -42,10 +47,11 @@ textarea {
   padding: 10px;
   border: 1px solid var(--text);
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.5rem;
   border-radius: 6px;
   font-family: Mulish, monospace;
+  resize: none;
 }
 
 button {
@@ -57,4 +63,11 @@ button {
   margin: 10px 0 10px 0;
   padding: 18px 33px;
   border: none;
+}
+
+.example-text {
+  font-weight: 300;
+}
+.examples-button {
+  
 }
