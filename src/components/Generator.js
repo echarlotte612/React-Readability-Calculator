@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Examples from '../components/Examples';
+import Examples from './Examples';
+import Results from './Results'
 
 export default function Generator() {
 
@@ -89,15 +90,16 @@ export default function Generator() {
                 </div>
             }
             {gotInfo &&
-                <div className="results-wrapper">
-                    <p>Letters: {numLetters}</p>
-                    <p>Words: {numWords}</p>
-                    <p>Sentences: {numSentences}</p>
-                    <h4>Grade: {grade}</h4>
-                    <button onClick={() => generateReport()}>Generate Another</button>
+                <div>
+                    <Results
+                        numLetters={numLetters}
+                        numSentences={numSentences}
+                        numWords={numWords}
+                        grade={grade}
+                    />
+                    <button onClick={() => generateReport()}>Generate Again</button>
                 </div>
             }
-
         </div>
     )
 }
