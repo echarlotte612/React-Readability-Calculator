@@ -19,9 +19,9 @@ export default function Examples() {
     }
 
     return (
-        <div>
-            <button onClick={() => getRandom()}><FaRandom /></button>
-            <p className="example">{examples[index].text}</p>
+        <div className="examples">
+            <button onClick={() => getRandom()} className="examples-button"><FaRandom /></button>
+            <p className="example-text">{examples[index].text}</p>
         </div>
     )
 }

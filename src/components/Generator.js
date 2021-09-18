@@ -86,7 +86,7 @@ export default function Generator() {
                         onChange={(e) => setText(e.target.value)}
                     />
                     <button onClick={() => generateReport()}>Generate</button>
-                    <Examples />
+                    {/* <Examples /> */}
                 </div>
             }
             {gotInfo &&
