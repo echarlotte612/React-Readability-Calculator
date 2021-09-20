@@ -10,6 +10,7 @@ export default function Generator() {
     const [numWords, setNumWords] = useState(0);
     const [numSentences, setNumSentences] = useState(0);
     const [grade, setGrade] = useState("");
+    const [showExamples, setShowExamples] = useState(false);
 
     useEffect(() => {
         let L = 100 * (numLetters / numWords);
@@ -77,6 +78,17 @@ export default function Generator() {
         }
     }
 
+    const toggleExamples = (e) => {
+        if (showExamples) {
+            setShowExamples(false);
+            e.target.innerHTML = "Examples";
+        }
+        else {
+            setShowExamples(true);
+            e.target.innerHTML = "Hide Examples";
+        }
+    }
+
     return (
         <div>
             {!gotInfo &&
@@ -85,8 +97,13 @@ export default function Generator() {
                         placeholder="Enter text here..."
                         onChange={(e) => setText(e.target.value)}
                     />
-                    <button onClick={() => generateReport()}>Generate</button>
-                    {/* <Examples /> */}
+                    <div className="generator-buttons">
+                        <button onClick={() => generateReport()}>Generate</button>
+                        <button onClick={(e) => toggleExamples(e)}>Examples</button>
+                    </div>
+                    {showExamples && 
+                        <Examples />
+                    }
                 </div>
             }
             {gotInfo &&
