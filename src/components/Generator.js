@@ -97,8 +97,8 @@ export default function Generator() {
                         onChange={(e) => setText(e.target.value)}
                     />
                     <div className="generator-buttons">
-                        <button onClick={() => generateReport()}>Generate</button>
                         <button onClick={(e) => toggleExamples(e)}>Examples</button>
+                        <button onClick={() => generateReport()}>Generate</button>
                     </div>
                     {showExamples &&
                         <Examples />
